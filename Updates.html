@@ -1,0 +1,419 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>News &amp; Updates | JJ Institute</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed": "#d9e2ff",
+                "error": "#ba1a1a",
+                "surface-container-low": "#e6f6ff",
+                "on-secondary-fixed-variant": "#3c494f",
+                "primary": "#003178",
+                "on-primary": "#ffffff",
+                "surface-container-high": "#d5ecf8",
+                "secondary": "#536067",
+                "background": "#f3faff",
+                "outline": "#737783",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed": "#101d23",
+                "outline-variant": "#c3c6d4",
+                "on-surface": "#071e27",
+                "on-primary-fixed": "#001945",
+                "primary-container": "#0d47a1",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed-variant": "#00429c",
+                "surface-dim": "#c7dde9",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-tertiary-container": "#bbbcbc",
+                "tertiary": "#333536",
+                "on-secondary-container": "#57656b",
+                "inverse-on-surface": "#dff4ff",
+                "surface-tint": "#2b5bb5",
+                "on-primary-container": "#a1bbff",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed": "#1a1c1c",
+                "inverse-primary": "#b0c6ff",
+                "secondary-container": "#d4e2e9",
+                "inverse-surface": "#1e333c",
+                "primary-fixed-dim": "#b0c6ff",
+                "on-surface-variant": "#434652",
+                "secondary-fixed": "#d7e5ec",
+                "on-background": "#071e27",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "surface-container-highest": "#cfe6f2",
+                "secondary-fixed-dim": "#bbc9d0",
+                "on-error": "#ffffff",
+                "tertiary-container": "#4a4c4c",
+                "surface": "#f3faff",
+                "surface-bright": "#f3faff",
+                "error-container": "#ffdad6",
+                "tertiary-fixed": "#e2e2e2",
+                "surface-container-lowest": "#ffffff",
+                "surface-container": "#dbf1fe",
+                "surface-variant": "#cfe6f2"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "unit": "8px",
+                "margin-desktop": "40px",
+                "section-gap": "80px"
+            },
+            "fontFamily": {
+                "headline-xl": ["Roboto Slab"],
+                "label-md": ["Open Sans"],
+                "body-lg": ["Open Sans"],
+                "headline-lg": ["Roboto Slab"],
+                "body-md": ["Open Sans"],
+                "headline-md": ["Roboto Slab"],
+                "headline-xl-mobile": ["Roboto Slab"],
+                "body-sm": ["Open Sans"],
+                "label-lg": ["Open Sans"]
+            },
+            "fontSize": {
+                "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            animation: marquee 60s linear infinite;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .academic-card-hover:hover {
+            box-shadow: 0px 4px 12px rgba(13, 71, 161, 0.08);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md" data-mode="connect">
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/20 shadow-sm transition-all duration-300 bg-surface-container-lowest/90" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto py-3 md:py-4">
+<div class="flex items-center gap-2 md:gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"><a href="index.html">
+<img alt="JJ Institute of Hindi Studies Logo" class="w-full h-full object-contain" src="images/logo.png">
+</div>
+<span class="font-headline-md text-primary tracking-tight text-xl md:text-2xl lg:text-3xl">JJ INSTITUTE</span></a>
+</div>
+<div class="hidden md:flex items-center gap-4 lg:gap-8">
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="about.html">About Us</a><a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="Courses.html">Courses</a>
+
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="achievements.html">Achievements</a>
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="https://www.youtube.com/@jjinstitute" target="_blank">YOUTUBE</a>
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="faq.html">FAQ</a>
+</div>
+<div class="flex items-center gap-3 md:gap-4">
+<a href="contact.html"; class="hidden lg:block font-label-lg text-label-lg text-primary transition-all duration-300 uppercase hover:text-primary border border-primary px-4 py-2 rounded-lg hover:bg-primary/5">CONTACT US</a><a href="Enroll Now.html">
+<button class="bg-primary-container text-on-primary font-bold font-label-lg text-xs md:text-label-lg px-4 md:px-6 py-2 md:py-3 rounded-lg hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 uppercase">Enroll Now</button></a>
+</div>
+</div></nav>
+<main>
+<div class="w-full bg-primary-container text-on-primary py-2 marquee-container fixed z-40 border-t border-b border-primary-fixed/20 top-[72px] md:top-[80px]">
+<div class="animate-marquee font-label-md tracking-wider" style="animation-duration: 40s;">
+<span class="inline-block px-4">● ● Next Batch Starts Coming Friday ● Aksharabhyas, Bala Bodhini &amp; Parichaya Examination Results Announced ● Lower Examination Results Announced ● Admissions Open for Lower Examinations ● Admissions Open for Higher Examinations ● Hindi B.A. Coaching Class Admissions in Progress ● Last Date for Payment of Parichaya Examination Fees: 25 May &amp; 25 November ● Last Date for Payment of Lower Examination Fees: 25 June &amp; 24 December ● ●</span>
+<span class="inline-block px-4">● ● Next Batch Starts Coming Friday ● Aksharabhyas, Bala Bodhini &amp; Parichaya Examination Results Announced ● Lower Examination Results Announced ● Admissions Open for Lower Examinations ● Admissions Open for Higher Examinations ● Hindi B.A. Coaching Class Admissions in Progress ● Last Date for Payment of Parichaya Examination Fees: 25 May &amp; 25 November ● Last Date for Payment of Lower Examination Fees: 25 June &amp; 24 December ● ●</span>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 pt-40 md:pt-48">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="relative rounded-lg overflow-hidden h-[400px] flex items-center bg-primary-container">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay">
+<img class="w-full h-full object-cover" data-alt="A grand, modern university library interior with floor-to-ceiling bookshelves, scholarly students in light-colored attire engaged in study, and soft afternoon light streaming through large windows. The atmosphere is quiet, intellectual, and prestigious, utilizing a professional palette of deep blues and ivory whites." src="images/abg.png">
+</div>
+<div class="relative z-10 px-12 max-w-2xl">
+<span class="bg-primary text-on-primary px-4 py-1 font-label-md rounded mb-4 inline-block uppercase tracking-widest">Institutional Bulletin</span>
+<h1 class="font-headline-xl text-headline-xl text-on-primary mb-6">Latest News &amp; Academic Updates</h1>
+<p class="font-body-lg text-body-lg text-on-primary/90">Stay informed with the latest developments from the JJ Institute. Explore upcoming batches, examination schedules, and admission announcements.</p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Content Area -->
+<div class="lg:col-span-8 space-y-16">
+<!-- Featured News Card -->
+<section>
+<div class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col md:flex-row academic-card-hover">
+<div class="md:w-1/2 h-64 md:h-auto">
+<img class="w-full h-full object-cover" data-alt="A clean, modern classroom environment featuring a diverse group of focused students sitting at modular wooden tables, each using a tablet for interactive learning. A professional female educator stands by a large interactive display board showing educational content." src="images/admission.png">
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-2 text-primary font-label-md mb-3">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="">Batch Starts Now</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4 uppercase">Upcoming Batch Commencing Friday</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                  Our new session for primary linguistic certification is set to begin this Friday. Students are advised to finalize their registration and collect course materials from the administrative wing.
+              </p><a href="contact.html">
+<button class="bg-primary text-on-primary px-6 py-3 rounded text-label-lg font-bold uppercase w-fit hover:bg-primary-container transition-all">
+                  Register Now
+              </button></a>
+</div>
+</div>
+</section>
+<!-- Examination Results Section -->
+<section class="bg-surface-container-low p-8 rounded-lg border border-outline-variant">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">Examination Results</h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 font-label-md rounded">New Releases</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface p-6 border border-outline-variant rounded hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">Aksharabhyas</h3>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 italic">Spring Cycle - Provisional Merit List</p>
+<a class="text-primary font-bold border-b border-primary text-label-md inline-flex items-center gap-2" href="https://www.hindisabhatrichy.com/HTML/results.php" target="_blank">VIEW RESULTS <span class="material-symbols-outlined text-sm">download</span></a>
+</div>
+<div class="bg-surface p-6 border border-outline-variant rounded hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">Bala Bodhini</h3>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 italic">Final Certification Grading Available</p>
+<a class="text-primary font-bold border-b border-primary text-label-md inline-flex items-center gap-2" href="https://www.hindisabhatrichy.com/HTML/results.php" target="_blank">VIEW RESULTS <span class="material-symbols-outlined text-sm">download</span></a>
+</div>
+<div class="bg-surface p-6 border border-outline-variant rounded hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">Parichaya</h3>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 italic">National Level Ranking Results</p>
+<a class="text-primary font-bold border-b border-primary text-label-md inline-flex items-center gap-2" href="https://www.hindisabhatrichy.com/HTML/results.php" target="_blank">VIEW RESULTS <span class="material-symbols-outlined text-sm">download</span></a>
+</div>
+<div class="bg-surface p-6 border border-outline-variant rounded hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">Lower Exams</h3>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 italic">Comprehensive Batch Results</p>
+<a class="text-primary font-bold border-b border-primary text-label-md inline-flex items-center gap-2" href="https://www.dbhpscentral.org/hallticket/index" target="_blank">VIEW RESULTS <span class="material-symbols-outlined text-sm">download</span></a>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-4 bg-surface p-4 rounded border border-outline-variant">
+<img class="w-16 h-16 rounded object-cover shadow-sm" data-alt="A close-up high-resolution image of a prestigious gold wax seal" src="images/Goldseal.png">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Certification transcripts will be dispatched to registered addresses within 15 business days of result publication.</p>
+</div>
+</section>
+<!-- Admissions Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-primary text-on-primary p-8 rounded-lg relative overflow-hidden group">
+<div class="absolute right-0 bottom-0 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 160px;">school</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-4 uppercase">Admissions Open</h2>
+<p class="font-body-md mb-6 opacity-90">Lower &amp; Higher Examinations entry portals are now active for the upcoming semester.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-label-lg"><span class="material-symbols-outlined text-sm">check_circle</span> Verified Curriculum</li>
+<li class="flex items-center gap-2 text-label-lg"><span class="material-symbols-outlined text-sm">check_circle</span> Flexible Exam Centers</li>
+<li class="flex items-center gap-2 text-label-lg"><span class="material-symbols-outlined text-sm">check_circle</span> Digital Credentials</li>
+</ul><a href="Enroll Now">
+<button class="bg-surface text-primary px-6 py-2 rounded text-label-lg font-bold uppercase hover:bg-surface-container-high transition-colors">Apply Today</button></a>
+</div>
+<div class="bg-surface border-2 border-primary p-8 rounded-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 uppercase">B.A. Hindi Coaching</h2>
+<p class="font-body-md text-on-surface-variant mb-6">Enroll in our specialized Hindi B.A. Coaching Classes led by distinguished linguistic scholars.</p>
+<div class="flex items-center justify-between p-4 bg-surface-container rounded mb-6 border border-outline-variant">
+<div>
+<p class="text-label-md font-bold text-primary">LIMITED SEATS</p>
+<p class="text-body-sm">Morning &amp; Evening Batches</p>
+</div>
+<span class="material-symbols-outlined text-primary">groups</span>
+</div><a href="contact.html">
+<button class="bg-primary text-on-primary w-full py-3 rounded text-label-lg font-bold uppercase hover:bg-primary-container transition-all">Enquire for Admission</button></a>
+</div>
+</section>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="bg-white border border-outline-variant rounded-lg p-8 sticky top-40">
+<div class="flex items-center gap-2 mb-6 text-error">
+<span class="material-symbols-outlined">notification_important</span>
+<h2 class="font-headline-md text-headline-md uppercase">Critical Deadlines</h2>
+</div>
+<div class="space-y-8">
+<div>
+<p class="font-label-lg text-primary uppercase mb-2">Parichaya Examination</p>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant">
+<span class="font-body-md">Spring Cycle</span>
+<span class="font-bold text-on-surface">15 May</span>
+</div>
+<div class="flex justify-between items-center py-3">
+<span class="font-body-md">Winter Cycle</span>
+<span class="font-bold text-on-surface">15 Nov</span>
+</div>
+</div>
+<div>
+<p class="font-label-lg text-primary uppercase mb-2">Lower Examination</p>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant">
+<span class="font-body-md">Annual Batch</span>
+<span class="font-bold text-on-surface">15 June</span>
+</div>
+<div class="flex justify-between items-center py-3">
+<span class="font-body-md">Supplemental</span>
+<span class="font-bold text-on-surface">15 Dec</span>
+</div>
+</div>
+</div>
+<div class="mt-8 p-4 bg-error-container rounded border border-error/20">
+<p class="text-on-error-container text-body-sm font-semibold">Late fees will be applicable for payments made after the stipulated deadlines.</p>
+</div>
+<div class="mt-8 border-t border-outline-variant pt-8">
+<h3 class="font-label-lg text-primary uppercase mb-4">Support &amp; Helpdesk</h3>
+<div class="space-y-4">
+<a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="mailto:exams@jjinstitute.co.in">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="font-body-sm">exams@jjinstitute.co.in</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="tel:+914226903111">
+<span class="material-symbols-outlined text-secondary">call</span>
+<span class="font-body-sm">+91 422 6903111 &amp; +91 9790 590 432</span>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg p-6">
+<img class="w-full h-48 object-cover rounded mb-4" data-alt="A sleek digital display board in a high-traffic hallway" src="images/event.png">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Campus Events</h3>
+<p class="text-body-sm text-on-surface-variant">Check out the upcoming cultural seminars and international workshops scheduled for the next quarter.</p>
+</div>
+</aside>
+</div>
+</div>
+<!-- Global Footer Section -->
+<footer class="bg-primary pt-section-gap border-t border-on-primary/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+<!-- 4-Column Footer -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pt-12 border-t border-on-primary/10">
+<!-- Branding -->
+<div class="space-y-6">
+<span class="font-headline-lg text-headline-lg text-on-primary">JJ Institute</span>
+<p class="text-on-primary-container/80 font-body-md leading-relaxed">Dedicated to excellence in Hindi language studies since 2009. Join the movement of confident Hindi speakers in South India.</p>
+<div class="flex gap-4">
+<a class="w-9 h-9 bg-on-primary-container/10 rounded-full flex items-center justify-center text-on-primary hover:bg-primary-fixed hover:text-primary transition-all" href="https://www.google.com/maps/dir/?api=1&destination=11.074141,76.9156563" target="_blank"><span class="material-symbols-outlined text-sm">face_nod</span></a>
+<a class="w-9 h-9 bg-on-primary-container/10 rounded-full flex items-center justify-center text-on-primary hover:bg-primary-fixed hover:text-primary transition-all" href="mailto:future@jjinstitute.co.in?subject=Enquiry%20About%20Hindi%20Language%20Courses&body=Dear%20Admissions%20Team%2C%0D%0A%0D%0AI%20hope%20you%20are%20doing%20well.%0D%0A%0D%0AMy%20name%20is%20%5BYour%20Name%5D%2C%20and%20I%20am%20interested%20in%20enrolling%20in%20a%20Hindi%20language%20course%20offered%20by%20JJ%20Institute.%0D%0A%0D%0AI%20would%20like%20to%20know%20more%20about%20the%20%5BPreferred%20Course%20Name%2FLevel%5D%20course.%20Could%20you%20please%20share%20the%20details%3F%0D%0A%0D%0AI%20am%20keen%20to%20enhance%20my%20Hindi%20language%20skills%20and%20would%20appreciate%20it%20if%20you%20could%20provide%20the%20relevant%20information%20and%20any%20brochures%20or%20course%20materials%20available.%0D%0A%0D%0AThank%20you%20for%20your%20time%20and%20assistance.%20I%20look%20forward%20to%20hearing%20from%20you.%0D%0A%0D%0AKind%20regards%2C%0D%0A%0D%0A%5BYour%20Name%5D%0D%0APhone%3A%20%5BYour%20Phone%20Number%5D%0D%0AEmail%3A%20%5BYour%20Email%20Address%5D"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+<a class="w-9 h-9 bg-on-primary-container/10 rounded-full flex items-center justify-center text-on-primary hover:bg-primary-fixed hover:text-primary transition-all" href="https://www.youtube.com/watch?v=RKoUq4i5_RA&list=PL1QyXPlq8qgvP3iA2Yq4krqiTb4-3IYyu&pp=0gcJCewCOCosWNin" target="_blank"><span class="material-symbols-outlined text-sm">video_library</span></a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg text-on-primary border-b border-primary-fixed pb-2 inline-block uppercase">Quick Links</h4>
+<ul class="space-y-4 font-body-md">
+<li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="about.html">About Us</a></li>
+<li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="Courses.html">Course Catalog</a></li>
+<li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="Updates.html">Sabha Exam Schedule</a></li>
+<li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="achievements.html">Success Stories</a></li>
+</ul>
+</div>
+<!-- Our Branches -->
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg text-on-primary border-b border-primary-fixed pb-2 inline-block uppercase">Our Branches</h4>
+<ul class="space-y-4 font-body-md text-sm text-on-primary-container/80">
+<li class=""><strong class="text-on-primary block">Head Office:</strong> Coimbatore (Thudiyalur)</li>
+<li class=""><strong class="text-on-primary block">Branch 1:</strong> Kotagiri, The Nilgiris</li>
+<li class=""><strong class="text-on-primary block">Branch 2:</strong> Peelamedu, Coimbatore</li>
+</ul>
+</div>
+<!-- Admissions -->
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg text-on-primary border-b border-primary-fixed pb-2 inline-block uppercase">Admissions Open</h4>
+<p class="text-on-primary-container/80 text-sm font-body-md">Join our new batch starting soon. Scholarships available for high merit school students.</p>
+<div class="bg-primary-container/30 p-6 rounded-lg border border-on-primary-container/20">
+<p class="text-primary-fixed font-bold text-xl mb-1 font-headline-lg">99.4%</p>
+<p class="text-on-primary-container/60 text-[10px] uppercase tracking-widest font-label-md">Exam Pass Rate</p>
+</div>
+</div>
+</div>
+<!-- Copyright -->
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-on-primary/10 text-center">
+<div class="flex flex-col items-center gap-4 text-on-primary-container/40 text-[10px] md:text-[12px] font-body-md uppercase tracking-widest">
+  <div class="w-12 h-12 md:w-16 md:h-16">
+    <img src="images/logolite.png" alt="JJ Institute Logo" class="w-full h-full object-contain opacity-60">
+  </div>
+  <p class="font-bold text-on-primary-container/60">JJ INSTITUTE - BUILD FOR ACADEMIC EXCELLENCE</p>
+  <div class="h-2"></div>
+  <p class="">© 2026 All Rights Reserved</p></div>
+</div>
+</div>
+
+</footer>
+<!-- WhatsApp Floating FAB -->
+<a class="fixed bottom-6 right-6 md:bottom-8 md:right-8 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl z-50 transition-all hover:scale-110 active:scale-95 group" href="https://wa.me/919865903884?text=Hi,%20Please%20share%20details%20about%20Hindi%20Classes." rel="noopener noreferrer" target="_blank">
+<svg class="w-7 h-7 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.109.004.258-.041.404.308.158.386.541 1.32.588 1.416.048.096.08.208.016.336-.064.128-.096.208-.192.32-.096.112-.202.249-.288.335-.096.096-.197.201-.085.392.112.191.498.819 1.07 1.328.736.656 1.357.86 1.55.956.191.096.303.08.415-.048.112-.128.48-.56.608-.752.128-.192.256-.16.432-.096.176.064 1.12.528 1.312.624.192.096.32.144.368.224.048.08.048.464-.096.869z"></path>
+</svg>
+<span class="absolute right-20 bg-surface-container-lowest text-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-body-md hidden md:block">Chat with us!</span>
+</a>
+</main>
+<script>
+    // Nav shrink on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('main-nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('py-1', 'shadow-md', 'bg-surface-container-lowest/95');
+            nav.classList.remove('bg-surface-container-lowest/90');
+        } else {
+            nav.classList.remove('py-1', 'shadow-md', 'bg-surface-container-lowest/95');
+            nav.classList.add('bg-surface-container-lowest/90');
+        }
+    });
+
+    // Simple Micro-interactions
+    document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mousedown', () => {
+            el.classList.add('opacity-80');
+        });
+        el.addEventListener('mouseup', () => {
+            el.classList.remove('opacity-80');
+        });
+    });
+</script>
+
+
+
+
+
+
+</body></html>

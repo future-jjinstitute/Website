@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Achievements | JJ Institute</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#3c494f",
+                    "primary-fixed": "#d9e2ff",
+                    "outline": "#737783",
+                    "surface-bright": "#f3faff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container-highest": "#cfe6f2",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#333536",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#d5ecf8",
+                    "primary": "#003178",
+                    "on-primary-fixed": "#001945",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "outline-variant": "#c3c6d4",
+                    "secondary-fixed": "#d7e5ec",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#e6f6ff",
+                    "on-background": "#071e27",
+                    "tertiary-container": "#4a4c4c",
+                    "secondary-container": "#d4e2e9",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#0d47a1",
+                    "surface": "#f3faff",
+                    "on-tertiary-container": "#bbbcbc",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "surface-variant": "#cfe6f2",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container": "#dbf1fe",
+                    "on-surface-variant": "#434652",
+                    "inverse-surface": "#1e333c",
+                    "background": "#f3faff",
+                    "secondary-fixed-dim": "#bbc9d0",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-secondary-fixed": "#101d23",
+                    "on-secondary-container": "#57656b",
+                    "secondary": "#536067",
+                    "inverse-on-surface": "#dff4ff",
+                    "surface-dim": "#c7dde9",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#2b5bb5",
+                    "on-error": "#ffffff",
+                    "on-surface": "#071e27"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-xl-mobile": ["Roboto Slab"],
+                    "headline-lg": ["Roboto Slab"],
+                    "label-lg": ["Open Sans"],
+                    "headline-md": ["Roboto Slab"],
+                    "body-sm": ["Open Sans"],
+                    "body-lg": ["Open Sans"],
+                    "headline-xl": ["Roboto Slab"],
+                    "label-md": ["Open Sans"],
+                    "body-md": ["Open Sans"]
+            },
+            "fontSize": {
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+        @keyframes marquee-ltr {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+        @keyframes marquee-rtl {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-ltr {
+            animation: marquee-ltr 20s linear infinite;
+        }
+        .animate-marquee-rtl {
+            animation: marquee-rtl 20s linear infinite;
+        }
+        .marquee-container:hover .animate-marquee-ltr,
+        .marquee-container:hover .animate-marquee-rtl {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/20 shadow-sm transition-all duration-300 bg-surface-container-lowest/90" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto py-3 md:py-4">
+<div class="flex items-center gap-2 md:gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"><a href="index.html">
+<img alt="JJ Institute of Hindi Studies Logo" class="w-full h-full object-contain" src="images/logo.png">
+</div>
+<span class="font-headline-md text-primary tracking-tight text-xl md:text-2xl lg:text-3xl">JJ INSTITUTE</span></a>
+</div>
+<div class="hidden md:flex items-center gap-4 lg:gap-8">
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="about.html">About Us</a><a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="Courses.html">Courses</a>
+
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="achievements.html"><font color="black"><b><u>Achievements</font></b></u></a>
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="https://www.youtube.com/@jjinstitute" target="_blank">YOUTUBE</a>
+<a class="font-label-lg text-xs lg:text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase" href="faq.html">FAQ</a>
+</div>
+<div class="flex items-center gap-3 md:gap-4">
+<a href="contact.html"; class="hidden lg:block font-label-lg text-label-lg text-primary transition-all duration-300 uppercase hover:text-primary border border-primary px-4 py-2 rounded-lg hover:bg-primary/5">CONTACT US</a><a href="Enroll Now.html">
+<button class="bg-primary-container text-on-primary font-bold font-label-lg text-xs md:text-label-lg px-4 md:px-6 py-2 md:py-3 rounded-lg hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 uppercase">Enroll Now</button></a>
+</div></div>
+<main class="relative">
+<!-- Synchronized News Marquee from SCREEN_62 -->
+<div class="w-full bg-primary-container text-on-primary py-2 overflow-hidden whitespace-nowrap relative border-t border-primary/20"><a href="updates.html">
+<div class="inline-block animate-marquee-rtl font-label-md tracking-wider" style="animation-duration: 40s;"><span class="inline-block px-4">● ● Next Batch Starts Coming Friday ● Aksharabhyas, Bala Bodhini &amp; Parichaya Examination Results Announced ● Lower Examination Results Announced ● Admissions Open for July 2026 Batch ● Enrollment for French &amp; Spoken Hindi Started ● Last Date for Examination Registration: 15 June &amp; 15 December ● Last Date for Payment of Lower Examination Fees: 25 June &amp; 24 December ● ●</span><span class="inline-block px-4">● ● Next Batch Starts Coming Friday ● Aksharabhyas, Bala Bodhini &amp; Parichaya Examination Results Announced ● Lower Examination Results Announced ● Admissions Open for July 2026 Batch ● Enrollment for French &amp; Spoken Hindi Started ● Last Date for Examination Registration: 15 June &amp; 15 December ● Last Date for Payment of Lower Examination Fees: 25 June &amp; 24 December ● ●</span></div></a>
+</div>
+</nav>
+<main class="relative pt-32">
+<!-- Hero Section -->
+<section class="relative py-16 md:py-24 lg:py-32 bg-surface overflow-hidden"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop"><div class="grid grid-cols-1 gap-12 lg:gap-16 items-center"><div class="mx-auto text-center"><span class="inline-block font-label-md text-[10px] md:text-label-md text-primary-container bg-primary-fixed px-3 py-1 rounded-full mb-4 tracking-widest uppercase">Celebrating Excellence in Hindi Education</span><h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-6 leading-tight">Heartiest congratulations to all our successful students!</h1><p class="font-body-lg text-base md:text-body-lg text-on-surface-variant mb-8 md:mb-10 max-w-3xl text-center mx-auto">Your remarkable achievement in the Hindi Examinations reflects your dedication, discipline, and passion for learning. This success is not just a result—it's a milestone in your educational journey. We applaud your efforts and wish you continued success in all your future endeavors. May your knowledge grow, your confidence soar, and your achievements inspire many others.</p><div class="mb-8"><p class="font-headline-md text-primary font-bold">Well Done! Your Success Story Begins Here.</p></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 md:mt-16"><div><div class="text-primary font-headline-lg text-2xl md:text-headline-lg mb-1">100%</div><div class="font-label-md text-[10px] md:text-label-md text-on-surface-variant uppercase">Feb &amp; Aug Results</div></div><div><div class="text-primary font-headline-lg text-2xl md:text-headline-lg mb-1">3K+</div><div class="font-label-md text-[10px] md:text-label-md text-on-surface-variant uppercase">Students Trained</div></div><div><div class="text-primary font-headline-lg text-2xl md:text-headline-lg mb-1">17+</div><div class="font-label-md text-[10px] md:text-label-md text-on-surface-variant uppercase">Years Excellence</div></div><div><div class="text-primary font-headline-lg text-2xl md:text-headline-lg mb-1">Hybrid</div><div class="font-label-md text-[10px] md:text-label-md text-on-surface-variant uppercase">Online &amp; Offline</div></div></div></div></div></div></section>
+<!-- Excellence Gallery Section -->
+<section class="py-16 md:py-24 bg-surface-container-low overflow-hidden marquee-container">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12 text-center">
+<h2 class="font-headline-lg text-primary mb-2">Excellence Gallery</h2>
+<p class="font-headline-md text-on-surface-variant">Our Students' Achievements</p>
+</div>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.slider{
+    width:100%;
+    max-width:1200px;      /* Optional - remove if you want full width */
+    margin:auto;
+    aspect-ratio:16/9;     /* Automatically maintains proportion */
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.slider img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;      /* Use 'contain' if you don't want cropping */
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.slider img.active{
+    opacity:1;
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .slider{
+        aspect-ratio:4/3;
+        border-radius:8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+    <img src="images/photo1.jpg" class="active" alt="Photo 1">
+    <img src="images/photo2.jpg" alt="Photo 2">
+    <img src="images/photo3.jpg" alt="Photo 3">
+</div>
+
+<script>
+const images = document.querySelectorAll(".slider img");
+let current = 0;
+
+setInterval(() => {
+    images[current].classList.remove("active");
+    current = (current + 1) % images.length;
+    images[current].classList.add("active");
+}, 5000); // Switch every 5 seconds
+</script>
+
+
+<div class="relative overflow-hidden py-4">
+<!-- Row 1: Right to Left (Infinite Scroll) -->
+<div class="marquee-container w-full relative">
+<div class="animate-marquee-reverse flex gap-6" style="animation-duration: 10s;">
+<div class="flex gap-6">
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Ramya" class="w-full h-full object-cover" src="images/ramya.png"></div><h4 class="font-headline-md text-base text-primary mb-1">RAMYA</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">FIRST CLASS WITH DISTINCTION</p><p class="font-body-md text-secondary text-xs uppercase">BALA BODHINI</p></div>
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Praveen" class="w-full h-full object-cover" src="images/praveen.png"></div><h4 class="font-headline-md text-base text-primary mb-1">PRAVEEN</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">MERIT HOLDER</p><p class="font-body-md text-secondary text-xs uppercase">RASHTRABASHA</p></div>
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Kavya" class="w-full h-full object-cover" src="images/kavya.png"></div><h4 class="font-headline-md text-base text-primary mb-1">KAVYA</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">FIRST CLASS</p><p class="font-body-md text-secondary text-xs uppercase">MADHYAMA</p></div>
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Suresh" class="w-full h-full object-cover" src="images/suresh.png"></div><h4 class="font-headline-md text-base text-primary mb-1">SURESH</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">RANK HOLDER</p><p class="font-body-md text-secondary text-xs uppercase">PARICHAYA</p></div>
+</div>
+<div class="flex gap-6">
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Student Portrait" class="w-full h-full object-cover" src="images/anitha.png"></div><h4 class="font-headline-md text-base text-primary mb-1">ANITHA</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">SUBJECT TOPPER</p><p class="font-body-md text-secondary text-xs uppercase">SCHOOL HINDI</p></div>
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Student Portrait" class="w-full h-full object-cover" src="images/kamal.png"></div><h4 class="font-headline-md text-base text-primary mb-1">KAMALNADH</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">SUBJECT TOPPER</p><p class="font-body-md text-secondary text-xs uppercase">SCHOOL HINDI</p></div>
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Student Portrait" class="w-full h-full object-cover" src="images/ram.png"></div><h4 class="font-headline-md text-base text-primary mb-1">RAM</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">SABHA EXAM</p><p class="font-body-md text-secondary text-xs uppercase">PRAVEEN</p></div>
+<div class="min-w-[280px] bg-surface-container-lowest p-6 rounded-lg card-shadow text-center"><div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/10"><img alt="Student Portrait" class="w-full h-full object-cover" src="images/vijay.png"></div><h4 class="font-headline-md text-base text-primary mb-1">VIJAY</h4><p class="font-label-md tracking-wider text-mustard-gold uppercase mb-1">SABHA EXAM FIRST CLASS</p><p class="font-body-md text-secondary text-xs uppercase">PRAVEEN</p></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ready to Start Your Journey? CTA from SCREEN_62 region -->
+<section class="py-16 bg-primary-container text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h3 class="font-headline-lg mb-2">Ready to Start Your Journey?</h3>
+<p class="font-body-lg opacity-90">Enroll now and join our global community of Hindi scholars.</p>
+</div><a href="Enroll Now.html">
+<button class="bg-surface text-primary px-8 py-3 rounded-lg font-headline-md hover:bg-surface-bright transition-all shadow-md">
+                    Apply Online
+                </button></a>
+</div>
+</section>
+<!-- Synchronized Location & Footer Layout from SCREEN_62 -->
+<footer class="bg-primary pt-section-gap border-t border-on-primary/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+
+<!-- 4-Column Footer -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pt-12 border-t border-on-primary/10">
+<!-- Branding -->
+<div class="space-y-6">
+<span class="font-headline-lg text-headline-lg text-on-primary">JJ Institute</span>
+<p class="text-on-primary-container/80 font-body-md leading-relaxed">Dedicated to excellence in Hindi language studies since 2009. Join the movement of confident Hindi speakers in South India.</p>
+<div class="flex gap-4">
+<a class="w-9 h-9 bg-on-primary-container/10 rounded-full flex items-center justify-center text-on-primary hover:bg-primary-fixed hover:text-primary transition-all" href="https://www.google.com/maps/dir/?api=1&destination=11.074141,76.9156563" target="_blank"><span class="material-symbols-outlined text-sm">face_nod</span></a>
+<a class="w-9 h-9 bg-on-primary-container/10 rounded-full flex items-center justify-center text-on-primary hover:bg-primary-fixed hover:text-primary transition-all" href="mailto:future@jjinstitute.co.in?subject=Enquiry%20About%20Hindi%20Language%20Courses&body=Dear%20Admissions%20Team%2C%0D%0A%0D%0AI%20hope%20you%20are%20doing%20well.%0D%0A%0D%0AMy%20name%20is%20%5BYour%20Name%5D%2C%20and%20I%20am%20interested%20in%20enrolling%20in%20a%20Hindi%20language%20course%20offered%20by%20JJ%20Institute.%0D%0A%0D%0AI%20would%20like%20to%20know%20more%20about%20the%20%5BPreferred%20Course%20Name%2FLevel%5D%20course.%20Could%20you%20please%20share%20the%20details%3F%0D%0A%0D%0AI%20am%20keen%20to%20enhance%20my%20Hindi%20language%20skills%20and%20would%20appreciate%20it%20if%20you%20could%20provide%20the%20relevant%20information%20and%20any%20brochures%20or%20course%20materials%20available.%0D%0A%0D%0AThank%20you%20for%20your%20time%20and%20assistance.%20I%20look%20forward%20to%20hearing%20from%20you.%0D%0A%0D%0AKind%20regards%2C%0D%0A%0D%0A%5BYour%20Name%5D%0D%0APhone%3A%20%5BYour%20Phone%20Number%5D%0D%0AEmail%3A%20%5BYour%20Email%20Address%5D"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+<a class="w-9 h-9 bg-on-primary-container/10 rounded-full flex items-center justify-center text-on-primary hover:bg-primary-fixed hover:text-primary transition-all" href="https://www.youtube.com/watch?v=RKoUq4i5_RA&list=PL1QyXPlq8qgvP3iA2Yq4krqiTb4-3IYyu&pp=0gcJCewCOCosWNin" target="_blank"><span class="material-symbols-outlined text-sm">video_library</span></a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg text-on-primary border-b border-primary-fixed pb-2 inline-block uppercase">Quick Links</h4>
+<ul class="space-y-4 font-body-md">
+<li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="about.html">About Us</a></li> <li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="Courses.html">Course Catalog</a></li> <li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="Updates.html">Sabha Exam Schedule</a></li> <li class=""><a class="text-on-primary-container/80 hover:text-primary-fixed transition-colors block translate-x-0 hover:translate-x-1 transition-transform" href="achievements.html">Success Stories</a></li>
+</ul>
+</div>
+<!-- Our Branches -->
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg text-on-primary border-b border-primary-fixed pb-2 inline-block uppercase">Our Branches</h4>
+<ul class="space-y-4 font-body-md text-sm text-on-primary-container/80">
+<li class=""><strong class="text-on-primary block">Head Office:</strong> Coimbatore (Thudiyalur)</li>
+<li class=""><strong class="text-on-primary block">Branch 1:</strong> Kotagiri, The Nilgiris</li>
+<li class=""><strong class="text-on-primary block">Branch 2:</strong> Peelamedu, Coimbatore</li>
+</ul>
+</div>
+<!-- Admissions -->
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg text-on-primary border-b border-primary-fixed pb-2 inline-block uppercase">Admissions Open</h4>
+<p class="text-on-primary-container/80 text-sm font-body-md">Join our new batch starting soon. Scholarships available for high merit school students.</p>
+<div class="bg-primary-container/30 p-6 rounded-lg border border-on-primary-container/20">
+<p class="text-primary-fixed font-bold text-xl mb-1 font-headline-lg">99.4%</p>
+<p class="text-on-primary-container/60 text-[10px] uppercase tracking-widest font-label-md">Exam Pass Rate</p>
+</div>
+</div>
+</div>
+<!-- Copyright --> <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-on-primary/10 text-center">
+<div class="flex flex-col items-center gap-4 text-on-primary-container/40 text-[10px] md:text-[12px] font-body-md uppercase tracking-widest">
+  <div class="w-12 h-12 md:w-16 md:h-16">
+    <img src="images/logolite.png" alt="JJ Institute Logo" class="w-full h-full object-contain opacity-60">
+  </div>
+  <p class="font-bold text-on-primary-container/60">JJ INSTITUTE - BUILD FOR ACADEMIC EXCELLENCE</p>
+  <div class="h-2"></div>
+  <p class="">© 2026 All Rights Reserved</p>
+</div>
+</div>
+</footer></main>
+<script>
+    // Nav shrink on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('main-nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('py-2', 'shadow-md');
+            nav.classList.remove('py-4');
+        } else {
+            nav.classList.add('py-4');
+            nav.classList.remove('py-2', 'shadow-md');
+        }
+    });
+
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('mousedown', () => btn.style.transform = 'scale(0.98)');
+        btn.addEventListener('mouseup', () => btn.style.transform = 'scale(1)');
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://wa.me/919865903884?text=Hi,%20Please%20share%20details%20about%20Hindi%20Classes." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[100] flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95 animate-in fade-in slide-in-from-bottom-4" style="background-color: rgb(37, 211, 102);" aria-label="Chat on WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.319 1.592 5.548 0 10.064-4.516 10.066-10.066.002-5.548-4.515-10.066-10.066-10.066-5.548 0-10.064 4.517-10.066 10.066-.002 2.036.567 3.548 1.562 5.224l-.999 3.648 3.705-.971zm11.367-7.584c.01-.115-.045-.183-.147-.236-.102-.053-.599-.296-.694-.333-.095-.036-.164-.054-.234.054-.07.107-.271.337-.332.404-.061.067-.123.074-.225.02-.102-.053-.43-.158-.819-.506-.303-.27-.507-.602-.567-.704-.061-.102-.006-.157.045-.207.046-.045.102-.118.153-.177.05-.059.067-.101.102-.168.034-.067.017-.125-.008-.178-.025-.053-.234-.564-.32-.772-.084-.203-.169-.175-.234-.178-.06-.003-.129-.003-.198-.003-.068 0-.179.026-.273.128-.094.102-.359.35-.359.853s.367.99.418 1.058c.051.067.722 1.103 1.75 1.549.245.106.436.17.585.217.247.078.472.067.65.04.198-.03.599-.245.684-.482.085-.236.085-.438.059-.481z"></path></svg></a>
+
+
+
+
+
+
+
+
+
+</body></html>
